@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Mortgage Calculator</title>
+</head>
+<body>
+  <div class="card">
+    <div class="calculator-container">
+      <div class="top">
+        <p>Mortgage Calculator</p>
+        <button class="reset" onclick="clearAll()">Clear All</button>
+      </div>
+      <div class="input">
+        <p>Mortgage Amount</p>
+        <div class="input-container">
+          <span class="currency-symbol">£</span>
+          <input type="text" id="mortgage-amount" class="number-input" placeholder="300,000">
+        </div>
+      </div>
+      
+      <div class="term-rate">
+        <div class="input2">
+          <p>Mortgage Term</p>
+          <div class="input-container">
+            <input type="text" id="mortgage-term" class="number-input" placeholder="25">
+            <span class="currency-symbol">years</span>
+          </div>
+        </div>
+        <div class="input3">
+          <p>Interest Rate</p>
+          <div class="input-container">
+            <input type="text" id="interest-rate" class="number-input" placeholder="5.25">
+            <span class="currency-symbol">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="type">
+        <p>Mortgage Type</p>
+        <label class="radio-container">
+          <input type="radio" name="mortgage-type" value="repayment" checked>
+          <span class="radio-label">Repayment</span>
+        </label>
+        <label class="radio-container">
+          <input type="radio" name="mortgage-type" value="interest">
+          <span class="radio-label">Interest Only</span>
+        </label>
+      </div>
+      <button class="calculate" onclick="calculateRepayments()"><img src="./assets/images/icon-calculator.svg"> Calculate Repayments</button>
+    </div>
+
+    <div class="results">
+      <div class="top">
+        <p>Your results</p>
+      </div>
+      <p class="info">Your results are shown below based on the information
+        you provided. To adjust the results, edit the form and
+        click "calculate repayments" again.</p>
+      <div class="payment-results">
+        <div class="monthly">
+          <p>Your monthly repayments</p>
+          <span id="monthly-repayments"></span>
+        </div>
+        <div class="total">
+          <p>Total you'll repay over the term</p>
+          <span id="total-repayments"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
