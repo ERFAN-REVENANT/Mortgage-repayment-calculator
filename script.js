@@ -40,3 +40,20 @@ function clearAll() {
     document.getElementById('total-repayments').innerText = `£${totalRepayment.toFixed(2)}`;
   }
   
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    activeStates();
+  }); 
+
+
+  function activeStates() {
+    const inputs = document.querySelectorAll('.number-input');
+    inputs.forEach(input => {
+      input.addEventListener('focus', function(event) {
+        const container = event.target.closest('.input-container');
+        const symbol = container.querySelector('.currency-symbol');
+        
+      });
+    });
+  }
