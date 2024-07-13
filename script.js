@@ -57,3 +57,15 @@ function clearAll() {
       });
     });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const result = document.querySelector('.results');
+    const noresult = document.querySelector('.no-results');
+    const submit = document.querySelector('.calculate');
+  
+    submit.addEventListener('click', function() {
+      noresult.style.display = 'none';
+      result.style.display = 'block';
+    });
+  });
+    
